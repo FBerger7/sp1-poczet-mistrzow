@@ -17,6 +17,7 @@
   let currentSlideIndex = 0;
   let slideTargets = []; // Ordered list of section DOM IDs for Ceremony Mode (← / →)
   let isCeremonyMode = false;
+  let activeAthleteId = null; // null on Prologue/Epilogue, athlete.id when viewing an athlete section
 
   // Theme accent helper
   function getThemeClasses(theme) {
@@ -93,18 +94,19 @@
 
         <div class="max-w-[1440px] mx-auto px-4 lg:px-8 h-16 flex items-center justify-between gap-4">
           <!-- Brand / School Title -->
-          <button type="button" data-jump-target="section-prologue" class="flex items-center gap-3 text-left group shrink-0">
-            <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-amber-400/25 to-amber-600/10 border border-amber-400/40 flex items-center justify-center text-amber-300 shadow-inner group-hover:scale-105 transition-transform">
-              <i data-lucide="award" class="w-5 h-5"></i>
-            </div>
+          <button type="button" data-jump-target="section-prologue" class="flex items-center text-left group shrink-0">
             <div>
-              <div class="text-[11px] uppercase tracking-[0.2em] text-amber-400/90 font-semibold">${DATA.school.shortName}</div>
+              <div class="text-[11px] uppercase tracking-[0.2em] text-amber-400/90 font-semibold group-hover:text-amber-300 transition-colors">${DATA.school.shortName}</div>
               <div class="text-sm font-serif-ceremonial font-bold text-white tracking-wide">Poczet Sportowców</div>
             </div>
           </button>
 
-          <!-- Horizontal Athlete Timeline Pills -->
-          <nav aria-label="Oś czasu sportowców" class="hidden xl:flex items-center gap-1.5 overflow-x-auto py-1 no-scrollbar">
+          <!-- Horizontal Athlete Timeline Pills (Smart Interactive Ribbon) -->
+          <nav
+            id="header-timeline-nav"
+            aria-label="Oś czasu sportowców"
+            class="hidden lg:flex flex-1 max-w-xl xl:max-w-2xl min-w-0 mx-4 items-center gap-1.5 overflow-x-auto py-1.5 px-6 no-scrollbar nav-ribbon-mask select-none"
+          >
             ${navItems}
           </nav>
 
@@ -294,7 +296,7 @@
       imageContainerHTML = `
         <div class="frame-memorial-gold mx-auto max-w-sm">
           <div class="rounded-xl overflow-hidden border border-amber-400/40 relative group cursor-zoom-in">
-            <a href="${athlete.heroImage}" class="glightbox" data-gallery="gallery-${athlete.id}" data-glightbox="title: ${athlete.name}; description: ${athlete.heroCaption}">
+            <a href="${athlete.heroImage}" class="glightbox" data-gallery="gallery-${athlete.id}" data-glightbox="title: ${athlete.name}">
               <img src="${athlete.heroImage}" alt="${athlete.name}" class="w-full h-auto max-h-[430px] object-cover object-top transition-transform duration-700 group-hover:scale-105" />
             </a>
           </div>
@@ -306,7 +308,7 @@
       imageContainerHTML = `
         <div class="frame-archival-passepartout mx-auto">
           <div class="rounded-md overflow-hidden relative group cursor-zoom-in bg-slate-900">
-            <a href="${athlete.heroImage}" class="glightbox" data-gallery="gallery-${athlete.id}" data-glightbox="title: ${athlete.name}; description: ${athlete.heroCaption}">
+            <a href="${athlete.heroImage}" class="glightbox" data-gallery="gallery-${athlete.id}" data-glightbox="title: ${athlete.name}">
               <img src="${athlete.heroImage}" alt="${athlete.name}" class="w-full h-auto max-h-[450px] object-cover object-top transition-transform duration-700 group-hover:scale-105" />
             </a>
           </div>
@@ -318,7 +320,7 @@
     } else {
       imageContainerHTML = `
         <div class="rounded-2xl overflow-hidden border border-white/15 bg-slate-900 relative group shadow-2xl">
-          <a href="${athlete.heroImage}" class="glightbox block relative" data-gallery="gallery-${athlete.id}" data-glightbox="title: ${athlete.name}; description: ${athlete.heroCaption}">
+          <a href="${athlete.heroImage}" class="glightbox block relative" data-gallery="gallery-${athlete.id}" data-glightbox="title: ${athlete.name}">
             <img src="${athlete.heroImage}" alt="${athlete.name}" class="w-full h-[420px] sm:h-[460px] object-cover object-top transition-transform duration-700 group-hover:scale-105" />
             <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
             <div class="absolute bottom-4 left-4 right-4 flex items-end justify-between gap-3">
@@ -450,7 +452,7 @@
             ? "sm:col-span-2"
             : "";
 
-        const heightClass = idx === 0 ? "h-72 sm:h-96" : "h-56 sm:h-60";
+        const heightClass = "h-64 sm:h-full";
         const typeLabel =
           img.type === "podium"
             ? "Podium / Dekoracja"
@@ -466,7 +468,7 @@
             class="glightbox gallery-item-card bento-card block ${spanClass} ${heightClass} group"
             data-gallery="gallery-${athlete.id}"
             data-photo-type="${img.type}"
-            data-glightbox="title: ${img.title}; description: ${img.caption}"
+            data-glightbox="title: ${img.title}"
           >
             <img
               src="${img.src}"
@@ -474,7 +476,7 @@
               loading="lazy"
               class="w-full h-full object-cover object-top ${isArchivalDoc ? "p-2 bg-[#f5efe4] rounded-xl" : ""}"
             />
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/95 via-slate-950/25 to-transparent opacity-85 group-hover:opacity-95 transition-opacity"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/95 via-slate-950/20 to-transparent opacity-85 group-hover:opacity-95 transition-opacity"></div>
             <div class="absolute top-3 left-3">
               <span class="px-2.5 py-1 rounded-full text-[10px] uppercase tracking-wider font-semibold bg-slate-950/75 text-slate-200 border border-white/15 backdrop-blur-md">
                 ${typeLabel}
@@ -483,9 +485,8 @@
             <div class="absolute top-3 right-3 w-8 h-8 rounded-full bg-slate-950/70 border border-white/20 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity">
               <i data-lucide="zoom-in" class="w-4 h-4"></i>
             </div>
-            <div class="absolute bottom-3 left-3.5 right-3.5">
-              <div class="text-sm font-bold text-white group-hover:text-amber-300 transition-colors leading-snug">${img.title}</div>
-              <div class="text-xs text-slate-300/90 line-clamp-2 mt-0.5">${img.caption}</div>
+            <div class="absolute bottom-3.5 left-4 right-4">
+              <div class="font-serif-ceremonial text-lg sm:text-xl font-bold text-white group-hover:text-amber-300 transition-colors leading-snug drop-shadow-md">${img.title}</div>
             </div>
           </a>`;
       })
@@ -493,32 +494,14 @@
 
     return `
       <div class="bento-card rounded-3xl p-6 sm:p-8" data-gallery-container="${athlete.id}">
-        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 pb-4 border-b border-white/10">
-          <div>
-            <div class="text-xs uppercase tracking-[0.2em] ${theme.accentText} font-semibold">Archiwum Fotograficzne i Pamiątki (${athlete.gallery.length} zdjęć)</div>
-            <h3 class="font-serif-ceremonial text-2xl sm:text-3xl font-bold text-white mt-0.5">
-              Galeria Kariery – Kliknij dowolne zdjęcie, aby powiększyć na pełny ekran
-            </h3>
-          </div>
-
-          <!-- Filter Buttons -->
-          <div class="flex flex-wrap gap-1.5" data-gallery-filters="${athlete.id}">
-            <button type="button" data-filter="all" class="px-3 py-1 rounded-full text-xs font-semibold bg-amber-500/20 text-amber-200 border border-amber-400/50">
-              Wszystkie (${athlete.gallery.length})
-            </button>
-            <button type="button" data-filter="podium" class="px-3 py-1 rounded-full text-xs font-medium bg-white/5 text-slate-300 border border-white/10 hover:text-white">
-              Podium
-            </button>
-            <button type="button" data-filter="action" class="px-3 py-1 rounded-full text-xs font-medium bg-white/5 text-slate-300 border border-white/10 hover:text-white">
-              W akcji
-            </button>
-            <button type="button" data-filter="archival" class="px-3 py-1 rounded-full text-xs font-medium bg-white/5 text-slate-300 border border-white/10 hover:text-white">
-              Archiwum / Dokumenty
-            </button>
-          </div>
+        <div class="mb-6 pb-4 border-b border-white/10">
+          <div class="text-xs uppercase tracking-[0.2em] ${theme.accentText} font-semibold">Archiwum Fotograficzne i Pamiątki (${athlete.gallery.length} zdjęć)</div>
+          <h3 class="font-serif-ceremonial text-2xl sm:text-3xl font-bold text-white mt-0.5">
+            Galeria Kariery – Kliknij dowolne zdjęcie, aby powiększyć na pełny ekran
+          </h3>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4" data-gallery-grid="${athlete.id}">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 sm:auto-rows-[240px] gap-4" data-gallery-grid="${athlete.id}">
           ${itemsHTML}
         </div>
       </div>
@@ -760,36 +743,102 @@
     slideTargets = Array.from(document.querySelectorAll("[data-slide-section]")).map((el) => el.id);
   }
 
-  function initGalleryFilters() {
-    document.querySelectorAll("[data-gallery-filters]").forEach((filterBar) => {
-      const athleteId = filterBar.getAttribute("data-gallery-filters");
-      const grid = document.querySelector(`[data-gallery-grid="${athleteId}"]`);
-      if (!grid) return;
+  function initSmartHeaderRibbon() {
+    const nav = document.getElementById("header-timeline-nav");
+    if (!nav) return;
 
-      filterBar.querySelectorAll("button[data-filter]").forEach((btn) => {
-        btn.addEventListener("click", () => {
-          const filter = btn.getAttribute("data-filter");
+    let isHoveringNav = false;
+    let hoverVelocity = 0;
+    let virtualScrollLeft = nav.scrollLeft || 0;
+    let autoDirection = 1; // 1 = right, -1 = left
+    let edgePauseFrames = 0;
 
-          // Update active button style
-          filterBar.querySelectorAll("button[data-filter]").forEach((b) => {
-            b.className =
-              "px-3 py-1 rounded-full text-xs font-medium bg-white/5 text-slate-300 border border-white/10 hover:text-white transition-all";
-          });
-          btn.className =
-            "px-3 py-1 rounded-full text-xs font-semibold bg-amber-500/20 text-amber-200 border border-amber-400/50 transition-all";
-
-          // Filter cards
-          grid.querySelectorAll("[data-photo-type]").forEach((card) => {
-            const type = card.getAttribute("data-photo-type");
-            const match =
-              filter === "all" ||
-              type === filter ||
-              (filter === "archival" && (type === "archival" || type === "document"));
-            card.style.display = match ? "block" : "none";
-          });
-        });
-      });
+    nav.addEventListener("mouseenter", () => {
+      isHoveringNav = true;
+      virtualScrollLeft = nav.scrollLeft;
     });
+
+    nav.addEventListener("mousemove", (e) => {
+      isHoveringNav = true;
+      const rect = nav.getBoundingClientRect();
+      if (rect.width <= 0) return;
+      // Normalized position from -1 (left edge) to +1 (right edge)
+      const relX = ((e.clientX - rect.left) / rect.width) * 2 - 1;
+      const deadzone = 0.22; // Center 22% holds steady for easy clicking
+      if (Math.abs(relX) < deadzone) {
+        hoverVelocity = 0;
+      } else {
+        const intensity = (Math.abs(relX) - deadzone) / (1 - deadzone);
+        hoverVelocity = Math.sign(relX) * Math.pow(intensity, 1.35) * 6.5;
+      }
+    });
+
+    nav.addEventListener("mouseleave", () => {
+      isHoveringNav = false;
+      hoverVelocity = 0;
+    });
+
+    // Also allow mouse wheel horizontal panning over the ribbon
+    nav.addEventListener(
+      "wheel",
+      (e) => {
+        if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+          e.preventDefault();
+          virtualScrollLeft += e.deltaY * 0.7;
+          const maxScroll = Math.max(0, nav.scrollWidth - nav.clientWidth);
+          virtualScrollLeft = Math.max(0, Math.min(maxScroll, virtualScrollLeft));
+          nav.scrollLeft = virtualScrollLeft;
+        }
+      },
+      { passive: false }
+    );
+
+    function tickRibbon() {
+      const maxScroll = Math.max(0, nav.scrollWidth - nav.clientWidth);
+      if (maxScroll > 2) {
+        if (isHoveringNav) {
+          // 1. User is hovering on the header ribbon: pan left/right based on cursor X
+          if (hoverVelocity !== 0) {
+            virtualScrollLeft = Math.max(0, Math.min(maxScroll, virtualScrollLeft + hoverVelocity));
+            nav.scrollLeft = virtualScrollLeft;
+          }
+        } else if (activeAthleteId) {
+          // 2. User is viewing a specific athlete section: smoothly center that athlete's pill & hold steady
+          const activePill = nav.querySelector(`[data-athlete-pill="${activeAthleteId}"]`);
+          if (activePill) {
+            const targetScroll = Math.max(
+              0,
+              Math.min(maxScroll, activePill.offsetLeft - nav.clientWidth / 2 + activePill.offsetWidth / 2)
+            );
+            const diff = targetScroll - virtualScrollLeft;
+            if (Math.abs(diff) > 0.4) {
+              virtualScrollLeft += diff * 0.085;
+              nav.scrollLeft = virtualScrollLeft;
+            }
+          }
+        } else {
+          // 3. User is at Prologue or Epilogue (not on any specific person): gently auto-scroll back & forth
+          if (edgePauseFrames > 0) {
+            edgePauseFrames--;
+          } else {
+            virtualScrollLeft += autoDirection * 0.42;
+            if (virtualScrollLeft >= maxScroll) {
+              virtualScrollLeft = maxScroll;
+              autoDirection = -1;
+              edgePauseFrames = 45;
+            } else if (virtualScrollLeft <= 0) {
+              virtualScrollLeft = 0;
+              autoDirection = 1;
+              edgePauseFrames = 45;
+            }
+            nav.scrollLeft = virtualScrollLeft;
+          }
+        }
+      }
+      requestAnimationFrame(tickRibbon);
+    }
+
+    requestAnimationFrame(tickRibbon);
   }
 
   function scrollToSectionId(targetId) {
@@ -798,8 +847,7 @@
 
     const idx = slideTargets.indexOf(targetId);
     if (idx !== -1) {
-      currentSlideIndex = idx;
-      updateSlideBadge();
+      setActiveSlide(targetId, idx);
     }
 
     if (lenis) {
@@ -977,6 +1025,8 @@
     currentSlideIndex = idx;
     updateSlideBadge();
 
+    activeAthleteId = secId && secId.startsWith("athlete-") ? secId.replace("athlete-", "") : null;
+
     document.querySelectorAll("[data-athlete-pill]").forEach((pill) => {
       const pillTarget = `athlete-${pill.getAttribute("data-athlete-pill")}`;
       pill.classList.toggle("active", pillTarget === secId);
@@ -1002,7 +1052,7 @@
   document.addEventListener("DOMContentLoaded", () => {
     buildFullPage();
     initLightboxAndIcons();
-    initGalleryFilters();
+    initSmartHeaderRibbon();
     initCeremonyControls();
     initAnimationsAndScroll();
   });

@@ -147,7 +147,7 @@ body {
   transform: scale(1.055);
 }
 
-/* Timeline Top Navigation Active Pill */
+/* Timeline Top Navigation Active Pill & Ribbon Mask */
 .timeline-nav-pill {
   transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
 }
@@ -157,6 +157,85 @@ body {
   border-color: rgba(229, 184, 66, 0.65);
   color: #fef08a;
   box-shadow: 0 0 18px rgba(229, 184, 66, 0.22);
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+.nav-ribbon-mask {
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 28px, black calc(100% - 28px), transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 28px, black calc(100% - 28px), transparent 100%);
+}
+
+/* GLightbox Newspaper Headline Overlay Caption (Overlaid ON the Enlarged Image) */
+.glightbox-container .ginner-container {
+  position: relative !important;
+}
+
+.glightbox-clean .gslide-media {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.9) !important;
+}
+
+.glightbox-clean .gslide-image img {
+  max-height: 90vh !important;
+  border-radius: 10px;
+}
+
+.glightbox-clean .gslide-description,
+.glightbox-mobile .glightbox-container .gslide-description {
+  position: absolute !important;
+  bottom: 1.35rem !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: max-content !important;
+  max-width: min(90vw, 760px) !important;
+  background: linear-gradient(135deg, rgba(6, 9, 17, 0.88) 0%, rgba(15, 23, 42, 0.84) 100%) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  border: 1px solid rgba(212, 175, 55, 0.5) !important;
+  border-left: 4px solid #d4af37 !important;
+  border-radius: 0.75rem !important;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.85) !important;
+  z-index: 30 !important;
+  pointer-events: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  flex: none !important;
+}
+
+.glightbox-clean .gdesc-inner,
+.glightbox-mobile .glightbox-container .gdesc-inner {
+  padding: 0.7rem 1.5rem !important;
+}
+
+.glightbox-clean .gslide-title,
+.glightbox-mobile .glightbox-container .gslide-title {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-size: clamp(1.35rem, 2.3vw, 2.05rem) !important;
+  font-weight: 700 !important;
+  font-style: italic !important;
+  letter-spacing: 0.015em !important;
+  color: #fef08a !important;
+  margin: 0 !important;
+  line-height: 1.22 !important;
+  text-align: center !important;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.8) !important;
+}
+
+.glightbox-clean .gslide-desc,
+.glightbox-mobile .glightbox-container .gslide-desc {
+  display: none !important;
 }
 
 /* Ceremony Mode Enhancements (Projector Readability) */
