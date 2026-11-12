@@ -149,10 +149,7 @@ window.HALL_OF_FAME_DATA = {
           body: "W 2005 roku, podczas uroczystych obchodów 80-lecia istnienia klubu Unia Bieruń Stary, za wieloletnie sukcesy i wkład w rozwój dyscypliny został uhonorowany najwyższym wyróżnieniem związkowym – Złotą Odznaką Polskiego Związku Skata. Pozostał w pamięci lokalnej społeczności jako wzór sportowej kultury i pasji."
         }
       ],
-      quote: {
-        text: "Zarówno na ligowej murawie, jak i przy turniejowym stole skatowym, o zwycięstwie decydują te same cechy: charakter, chłodna głowa i szacunek dla barw klubowych.",
-        author: "Wspomnienie sekcji skata sportowego KS Unia Bieruń Stary"
-      },
+      quote: null,
       bentoStats: [
         { value: "1992", label: "I Wicemistrz Polski", sub: "Indywidualne MP w skacie (kat. „O”)", icon: "trophy", highlight: true },
         { value: "1993", label: "II Wicemistrz Polski", sub: "Drugie z rzędu podium krajowego czempionatu", icon: "medal", highlight: true },
@@ -408,11 +405,11 @@ window.HALL_OF_FAME_DATA = {
         { src: "assets/athletes/piotr_kamrowski/trybuny_olimpijskie.jpg", title: "Na olimpijskich trybunach", caption: "Chwila radości w gronie polskiej ekipy olimpijskiej.", type: "archival" },
         { src: "assets/athletes/piotr_kamrowski/w_samolocie_kadra.jpg", title: "W drodze na zawody z kadrą", caption: "Na pokładzie samolotu w dresach z białym orłem (wraz z Beatą Maksymów i kolegami z kadry).", type: "archival" },
         { src: "assets/athletes/piotr_kamrowski/trzej_reprezentanci.jpg", title: "W biało-czerwonych barwach", caption: "Z kolegami z reprezentacji narodowej podczas zgrupowania.", type: "archival" },
-        { src: "assets/athletes/piotr_kamrowski/druzyna_na_macie.jpg", title: "Prezentacja drużyny na tatami", caption: "Zespół judoków z orzełkiem na piersi przed rozpoczęciem turnieju.", type: "archival" },
+        { src: "assets/athletes/piotr_kamrowski/druzyna_na_macie.jpg", title: "Ceremonia medalowa", caption: "Zespół judoków z orzełkiem na piersi przed rozpoczęciem turnieju.", type: "archival" },
         { src: "assets/athletes/piotr_kamrowski/zgrupowanie_azja.jpg", title: "Zgrupowanie w Azji (1991)", caption: "Pamiątkowe zdjęcie polskiej kadry podczas obozu szkoleniowego na Dalekim Wschodzie.", type: "archival" },
         { src: "assets/athletes/piotr_kamrowski/trening_grupowy_mata.jpg", title: "Na wspólnej macie", caption: "Po wyczerpującym treningu z elitą polskiego judo.", type: "archival" },
         { src: "assets/athletes/piotr_kamrowski/z_kolega_w_judogi.jpg", title: "Z nagrodami po turnieju", caption: "Na podium po udanym starcie krajowym.", type: "podium" },
-        { src: "assets/athletes/piotr_kamrowski/spotkanie_przy_stole.jpg", title: "Oficjalne spotkanie reprezentacji", caption: "Uroczyste podsumowanie startów kadry narodowej.", type: "archival" }
+        { src: "assets/athletes/piotr_kamrowski/spotkanie_przy_stole.jpg", title: "Spotkanie z Pierwszą Damą Jolantą Kwaśniewską", caption: "Uroczyste spotkanie reprezentacji olimpijskiej z Pierwszą Damą RP.", type: "archival" }
       ]
     },
 
@@ -473,9 +470,9 @@ window.HALL_OF_FAME_DATA = {
         { year: "2025–2026", title: "Brązowy medalista Mistrzostw Polski BMX Park w Poznaniu (2025) oraz mechanik Kadry Narodowej (2026)", tier: "bronze" }
       ],
       gallery: [
-        { src: "assets/athletes/piotr_leszczynski/skok_zachod_slonca.jpg", title: "Wysoki lot o zachodzie słońca", caption: "Ewolucja w pełnym wyproście nad rampą Techramps.", type: "action" },
+        { src: "assets/athletes/piotr_leszczynski/skok_zachod_slonca.jpg", title: "Wysoki lot", caption: "Ewolucja w pełnym wyproście nad rampą Techramps.", type: "action" },
         { src: "assets/athletes/piotr_leszczynski/hero_podium_mp.jpg", title: "Mistrz Polski BMX Freestyle 2023!", caption: "Piotr Leszczyński na najwyższym stopniu podium Mistrzostw Polski w Krzeszowicach.", type: "podium" },
-        { src: "assets/athletes/piotr_leszczynski/igrzyska_lot_w_powietrzu.jpg", title: "Salto nad olimpijskim parkiem", caption: "Ewolucja powietrzna podczas zawodów mistrzowskich w Krzeszowicach.", type: "action" },
+        { src: "assets/athletes/piotr_leszczynski/igrzyska_lot_w_powietrzu.jpg", title: "Salto nad rampą", caption: "Ewolucja powietrzna podczas zawodów mistrzowskich w Krzeszowicach.", type: "action" },
         { src: "assets/athletes/piotr_leszczynski/bowl_transfer_trick.jpg", title: "Transfer nad betonowym bowlem", caption: "Techniczny trik wykonywany na dużej wysokości.", type: "action" },
         { src: "assets/athletes/piotr_leszczynski/woodward_usa_indoor.jpg", title: "W legendarnym Woodward (USA)", caption: "Trening kadry narodowej na najsłynniejszym krytym skateparku świata w Pensylwanii.", type: "action" },
         { src: "assets/athletes/piotr_leszczynski/kadra_igrzyska_krakow.jpg", title: "Reprezentacja Polski – Igrzyska Europejskie 2023", caption: "Kadra narodowa BMX Freestyle na arenie III Igrzysk Europejskich Kraków–Małopolska.", type: "podium" },

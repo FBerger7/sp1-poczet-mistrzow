@@ -105,7 +105,7 @@
           <nav
             id="header-timeline-nav"
             aria-label="Oś czasu sportowców"
-            class="hidden lg:flex flex-1 max-w-xl xl:max-w-2xl min-w-0 mx-4 items-center gap-1.5 overflow-x-auto py-1.5 px-6 no-scrollbar nav-ribbon-mask select-none"
+            class="relative hidden lg:flex flex-1 max-w-xl xl:max-w-2xl min-w-0 mx-4 items-center gap-1.5 overflow-x-auto py-1.5 px-7 no-scrollbar nav-ribbon-mask select-none"
           >
             ${navItems}
           </nav>
@@ -422,16 +422,11 @@
 
     return `
       <div class="bento-card rounded-3xl p-6 sm:p-8 border border-amber-400/30">
-        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-6 pb-4 border-b border-white/10">
-          <div>
-            <div class="text-xs uppercase tracking-[0.2em] text-amber-400 font-semibold">Gablota Trofeów i Pamięci</div>
-            <h3 class="font-serif-ceremonial text-2xl sm:text-3xl font-bold text-white mt-1">
-              Dwie Pasje: Od Boisk II Ligi do Podium Mistrzostw Polski w Skacie
-            </h3>
-          </div>
-          <span class="px-3.5 py-1.5 rounded-full text-xs font-semibold bg-amber-500/15 text-amber-200 border border-amber-400/30 shrink-0">
-            KS Unia Bieruń Stary
-          </span>
+        <div class="mb-6 pb-4 border-b border-white/10">
+          <div class="text-xs uppercase tracking-[0.2em] text-amber-400 font-semibold">Gablota Trofeów i Pamięci</div>
+          <h3 class="font-serif-ceremonial text-2xl sm:text-3xl font-bold text-white mt-1">
+            Dwie Pasje: Od Boisk II Ligi do Podium Mistrzostw Polski w Skacie
+          </h3>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -563,6 +558,21 @@
       ? buildSpecialTrophyShowcase(athlete)
       : buildAthleteGalleryBento(athlete, theme);
 
+    const quoteHTML =
+      athlete.quote && athlete.quote.text
+        ? `
+                <!-- Highlighted Personal Quote / Testimony -->
+                <blockquote class="mt-6 p-6 rounded-2xl bg-gradient-to-br from-amber-500/12 via-slate-900/90 to-slate-950 border border-amber-400/30 relative">
+                  <i data-lucide="quote" class="w-8 h-8 text-amber-400/30 absolute top-4 right-5"></i>
+                  <p class="font-serif-ceremonial italic text-xl sm:text-2xl text-amber-100 leading-relaxed relative z-10">
+                    „${athlete.quote.text}”
+                  </p>
+                  <footer class="mt-3 text-xs uppercase tracking-widest text-amber-400/90 font-semibold">
+                    — ${athlete.quote.author}
+                  </footer>
+                </blockquote>`
+        : "";
+
     return `
       <article
         id="athlete-${athlete.id}"
@@ -614,17 +624,7 @@
                 <div class="space-y-5 pt-2">
                   ${storySectionsHTML}
                 </div>
-
-                <!-- Highlighted Personal Quote / Testimony -->
-                <blockquote class="mt-6 p-6 rounded-2xl bg-gradient-to-br from-amber-500/12 via-slate-900/90 to-slate-950 border border-amber-400/30 relative">
-                  <i data-lucide="quote" class="w-8 h-8 text-amber-400/30 absolute top-4 right-5"></i>
-                  <p class="font-serif-ceremonial italic text-xl sm:text-2xl text-amber-100 leading-relaxed relative z-10">
-                    „${athlete.quote.text}”
-                  </p>
-                  <footer class="mt-3 text-xs uppercase tracking-widest text-amber-400/90 font-semibold">
-                    — ${athlete.quote.author}
-                  </footer>
-                </blockquote>
+                ${quoteHTML}
               </div>
 
               <!-- Curated Medal & Milestone Timeline -->
@@ -806,10 +806,10 @@
           // 2. User is viewing a specific athlete section: smoothly center that athlete's pill & hold steady
           const activePill = nav.querySelector(`[data-athlete-pill="${activeAthleteId}"]`);
           if (activePill) {
-            const targetScroll = Math.max(
-              0,
-              Math.min(maxScroll, activePill.offsetLeft - nav.clientWidth / 2 + activePill.offsetWidth / 2)
-            );
+            const navRect = nav.getBoundingClientRect();
+            const pillRect = activePill.getBoundingClientRect();
+            const pillCenterInNav = pillRect.left - navRect.left + nav.scrollLeft + pillRect.width / 2;
+            const targetScroll = Math.max(0, Math.min(maxScroll, pillCenterInNav - nav.clientWidth / 2));
             const diff = targetScroll - virtualScrollLeft;
             if (Math.abs(diff) > 0.4) {
               virtualScrollLeft += diff * 0.085;
