@@ -259,7 +259,7 @@ window.HALL_OF_FAME_DATA = {
         { src: "assets/athletes/maria_wrobel/rzut_w_wyskok_1.jpg", title: "Technika rzutu", caption: "Maria Głowacka-Wróbel podczas oddawania rzutu na bramkę.", type: "action" },
         { src: "assets/athletes/maria_wrobel/rzut_z_boku.jpg", title: "W pełnym biegu", caption: "Kadr meczowy z rozgrywek najwyższej klasy rozgrywkowej w latach 70.", type: "action" },
         { src: "assets/athletes/maria_wrobel/akcja_na_hali.jpg", title: "Z numerem 2 na parkiecie", caption: "Podczas spotkania ligowego w złotej erze chorzowskiego klubu.", type: "action" },
-        { src: "assets/athletes/maria_wrobel/podium_mistrzostw.jpg", title: "Na najwyższym stopniu podium", caption: "Dekoracja zwycięskiej drużyny podczas zawodów mistrzowskich.", type: "podium" },
+        { src: "assets/athletes/maria_wrobel/podium_mistrzostw.jpg", title: "Na podium", caption: "Dekoracja podczas zawodów mistrzowskich.", type: "podium" },
         { src: "assets/athletes/maria_wrobel/druzyna_ruch_dresy.jpg", title: "Mistrzowski zespół Ruchu Chorzów", caption: "Pamiątkowe zdjęcie drużyny w klubowych dresach z „eRką” na piersi.", type: "archival" },
         { src: "assets/athletes/maria_wrobel/druzyna_w_hali.jpg", title: "Drużyna ze sztabem szkoleniowym", caption: "Zespół szczypiornistek Ruchu Chorzów po kolejnym triumfie.", type: "archival" },
         { src: "assets/athletes/maria_wrobel/druzyna_przed_bramka.jpg", title: "Szereg mistrzyń przed bramką", caption: "Prezentacja zespołu przed rozpoczęciem spotkania.", type: "archival" },
