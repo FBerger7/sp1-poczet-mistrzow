@@ -42,7 +42,7 @@ window.HALL_OF_FAME_DATA = {
       badge: "Inicjatywa i Fundator Tablic Pamiątkowych",
       name: "prof. dr hab. n. med. Krzysztof Ficek",
       role: "Ortopeda, traumatolog i specjalista medycyny sportowej • Założyciel Centrum Medycznego Galen-Ortopedia w Bieruniu",
-      authorCredit: "Wykonawca projektu: Tomasz Wenklar",
+      authorCredit: "Wykonawca projektu tablic: Tomasz Wenklar",
       portrait: "assets/patron/prof_krzysztof_ficek.jpg",
       plaquesImage: "assets/patron/plaques/tablice_zbiorcze.jpg",
       plaquesTitle: "Stałe tablice pamiątkowe w Szkole Podstawowej nr 1 w Bieruniu",
