@@ -676,6 +676,34 @@
     const patron = DATA.school.patron;
     if (!patron) return "";
 
+    const plaquesStripHTML = (patron.plaquesGallery || [])
+      .map(
+        (item) => `
+        <a
+          href="${item.src}"
+          class="glightbox gallery-item-card bento-card block aspect-[4/3] relative group"
+          data-gallery="gallery-patron"
+          data-glightbox="title: ${item.title}"
+        >
+          <img
+            src="${item.src}"
+            alt="${item.title}"
+            loading="lazy"
+            class="w-full h-full object-cover"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/15 to-transparent opacity-85 group-hover:opacity-95 transition-opacity"></div>
+          <div class="absolute top-2 right-2 w-7 h-7 rounded-full bg-slate-950/70 border border-white/20 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity">
+            <i data-lucide="zoom-in" class="w-3.5 h-3.5"></i>
+          </div>
+          <div class="absolute bottom-2 left-2.5 right-2.5">
+            <div class="text-xs font-semibold text-white group-hover:text-amber-300 transition-colors leading-tight truncate">${item.label}</div>
+          </div>
+        </a>`
+      )
+      .join("");
+
+    const totalPlaquePhotos = 1 + (patron.plaquesGallery ? patron.plaquesGallery.length : 0);
+
     return `
       <section id="section-patron" data-slide-section="section-patron" data-section-era="amber" class="py-20 px-4 lg:px-8 border-t border-white/10 relative">
         <div class="max-w-[1360px] mx-auto">
@@ -726,10 +754,11 @@
                     ${patron.mission}
                   </p>
                 </div>
+                ${patron.authorCredit ? `<div class="text-xs sm:text-sm text-slate-400 pt-1">${patron.authorCredit}</div>` : ""}
               </div>
             </div>
 
-            <!-- Right: Commemorative Plaques Photo Slot (TBD Placeholder) -->
+            <!-- Right: Main Commemorative Plaques Wall Photo -->
             <div class="lg:col-span-6 bento-card rounded-3xl p-6 sm:p-8 flex flex-col justify-between gap-5 gsap-reveal">
               <div class="flex flex-wrap items-center justify-between gap-2 pb-4 border-b border-white/10">
                 <div>
@@ -739,7 +768,7 @@
                   </h3>
                 </div>
                 <span class="px-3 py-1 rounded-full text-xs font-mono-stat font-semibold bg-amber-500/15 text-amber-300 border border-amber-400/40">
-                  TBD • Wkrótce
+                  ${totalPlaquePhotos} zdjęć
                 </span>
               </div>
 
@@ -754,16 +783,38 @@
                   alt="${patron.plaquesTitle}"
                   class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
                 <div class="absolute top-3 right-3 w-9 h-9 rounded-full bg-slate-950/75 border border-white/20 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity">
                   <i data-lucide="zoom-in" class="w-4 h-4"></i>
+                </div>
+                <div class="absolute bottom-3.5 left-4 right-4">
+                  <div class="font-serif-ceremonial text-lg sm:text-xl font-bold text-white group-hover:text-amber-300 transition-colors drop-shadow-md">
+                    Mistrzowie Polski – Absolwenci Naszej Szkoły
+                  </div>
                 </div>
               </a>
 
               <p class="text-xs sm:text-sm text-slate-300/90 leading-relaxed">
-                W tym miejscu po uroczystym odsłonięciu pojawi się fotografia pamiątkowych tablic umieszczonych na stałe w budynku Szkoły Podstawowej nr 1 w Bieruniu.
+                Kompozycja tablic z zielonego marmuru i brązu umieszczona na stałe w murach Szkoły Podstawowej nr 1 w Bieruniu. Kliknij zdjęcie powyżej lub poniższe zbliżenia, aby obejrzeć detale na pełnym ekranie.
               </p>
             </div>
           </div>
+
+          ${
+            plaquesStripHTML
+              ? `
+          <!-- Bottom Strip: 7 Individual Plaque Close-ups -->
+          <div class="mt-6 bento-card rounded-3xl p-5 sm:p-6 gsap-reveal">
+            <div class="flex items-center justify-between gap-2 mb-4">
+              <div class="text-xs uppercase tracking-[0.2em] text-amber-400 font-semibold">Zbliżenia poszczególnych tablic</div>
+              <span class="text-xs text-slate-400">${patron.authorCredit || ""}</span>
+            </div>
+            <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-3">
+              ${plaquesStripHTML}
+            </div>
+          </div>`
+              : ""
+          }
         </div>
       </section>
     `;

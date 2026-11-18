@@ -42,11 +42,21 @@ window.HALL_OF_FAME_DATA = {
       badge: "Inicjatywa i Fundator Tablic Pamiątkowych",
       name: "prof. dr hab. n. med. Krzysztof Ficek",
       role: "Ortopeda, traumatolog i specjalista medycyny sportowej • Założyciel Centrum Medycznego Galen-Ortopedia w Bieruniu",
+      authorCredit: "Wykonawca projektu: Tomasz Wenklar",
       portrait: "assets/patron/prof_krzysztof_ficek.jpg",
-      plaquesImage: "assets/patron/tablice_placeholder.jpg",
+      plaquesImage: "assets/patron/plaques/tablice_zbiorcze.jpg",
       plaquesTitle: "Stałe tablice pamiątkowe w Szkole Podstawowej nr 1 w Bieruniu",
       bio: "Lekarz ortopeda i traumatolog narządu ruchu, profesor nauk medycznych i nauk o zdrowiu oraz wykładowca akademicki związany z AWF w Katowicach. Jako założyciel i prezes mieszczącego się w Bieruniu ośrodka Galen-Ortopedia, a także wieloletni lekarz kadr narodowych i członek polskich misji medycznych na Igrzyskach Olimpijskich, od dekad wspiera polskich mistrzów i dba o zdrowie sportowców.",
-      mission: "Z inicjatywy i dzięki wsparciu prof. dr hab. n. med. Krzysztofa Ficka w murach Szkoły Podstawowej nr 1 w Bieruniu powstaje stała ekspozycja tablic pamiątkowych honorujących naszych Wybitnych Absolwentów. Celem przedsięwzięcia jest trwałe docenienie ich osiągnięć, wyrażenie uznania dla lat ciężkiej pracy oraz zachowanie pamięci o lokalnych mistrzach – tak, aby ich postawa inspirowała kolejne pokolenia uczniów."
+      mission: "Z inicjatywy i dzięki wsparciu prof. dr hab. n. med. Krzysztofa Ficka w murach Szkoły Podstawowej nr 1 w Bieruniu powstała stała ekspozycja tablic pamiątkowych honorujących naszych Wybitnych Absolwentów. Celem przedsięwzięcia jest trwałe docenienie ich osiągnięć, wyrażenie uznania dla lat ciężkiej pracy oraz zachowanie pamięci o lokalnych mistrzach – tak, aby ich postawa inspirowała kolejne pokolenia uczniów.",
+      plaquesGallery: [
+        { src: "assets/patron/plaques/tablica_fundator_wykonawca.jpg", title: "Fundator i wykonawca projektu tablic", label: "Fundator i wykonawca" },
+        { src: "assets/patron/plaques/tablica_pilka_nozna.jpg", title: "Piłka nożna – Henryk Latocha", label: "Piłka nożna" },
+        { src: "assets/patron/plaques/tablica_skat.jpg", title: "Skat – Paweł Latocha", label: "Skat" },
+        { src: "assets/patron/plaques/tablica_pilka_reczna.jpg", title: "Piłka ręczna – Maria Wróbel", label: "Piłka ręczna" },
+        { src: "assets/patron/plaques/tablica_badminton.jpg", title: "Badminton – J. Podedworny, B. Rduch, W. Trecki", label: "Badminton" },
+        { src: "assets/patron/plaques/tablica_judo.jpg", title: "Judo – Piotr Kamrowski", label: "Judo" },
+        { src: "assets/patron/plaques/tablica_bmx.jpg", title: "BMX Freestyle – Piotr Leszczyński", label: "BMX Freestyle" }
+      ]
     }
   },
 
@@ -139,7 +149,7 @@ window.HALL_OF_FAME_DATA = {
       birthDate: "ur. 21 czerwca 1949 r. – zm. 24 sierpnia 2021 r.",
       schoolYears: "Absolwent Szkoły Podstawowej nr 1 w Bieruniu (lata 50./60.)",
       clubs: ["Unia Bieruń Stary", "Ruch Chorzów", "Włókniarz Pabianice"],
-      honors: ["Złota Odznaka Polskiego Związku Skata (2005)", "Dwukrotny Wicemistrz Polski w Skacie"],
+      honors: ["Złota Odznaka Polskiego Związku Skata (2005)", "Mistrz Polski w Skacie Sportowym"],
       heroImage: "assets/athletes/pawel_latocha/hero_portret.jpg",
       heroCaption: "Śp. Paweł Latocha (1949–2021) – sportowiec dwóch pasji: boisk piłkarskich oraz mistrzowskiej strategii skata.",
       heroFrameType: "memorial-gold",
@@ -151,8 +161,8 @@ window.HALL_OF_FAME_DATA = {
           body: "Swoją sportową drogę zaczynał od piłki nożnej. Boiskowy talent i pracowitość zaprowadziły go do renomowanych klubów ogólnopolskich – występował w drugoligowych zespołach Włókniarza Pabianice oraz chorzowskiego Ruchu, rywalizując na zapleczu najwyższej klasy rozgrywkowej w Polsce."
         },
         {
-          heading: "Mistrzowska strategia i dwa podia Mistrzostw Polski",
-          body: "Po zakończeniu kariery piłkarskiej odnalazł nową przestrzeń sportowej rywalizacji w skacie sportowym – dyscyplinie głęboko zakorzenionej w śląskiej tradycji, wymagającej pamięci matematycznej, psychologii i żelaznej koncentracji. Reprezentując sekcję skatową klubu Unia Bieruń Stary, przez dwa lata z rzędu stawał na podium Indywidualnych Mistrzostw Polski w kategorii ogólnej („O”): w 1992 roku wywalczył tytuł I Wicemistrza Polski, a rok później (1993) został II Wicemistrzem Polski."
+          heading: "Mistrzowska strategia i tytuł Mistrza Polski",
+          body: "Po zakończeniu kariery piłkarskiej odnalazł nową przestrzeń sportowej rywalizacji w skacie sportowym – dyscyplinie głęboko zakorzenionej w śląskiej tradycji, wymagającej pamięci matematycznej, psychologii i żelaznej koncentracji. Reprezentując sekcję skatową klubu Unia Bieruń Stary, w 1992 i 1993 roku sięgał po tytuł Mistrza Polski w Indywidualnych Mistrzostwach Polski w kategorii ogólnej („O”)."
         },
         {
           heading: "Złota Odznaka na 80-lecie Unii Bieruń Stary",
@@ -161,8 +171,8 @@ window.HALL_OF_FAME_DATA = {
       ],
       quote: null,
       bentoStats: [
-        { value: "1992", label: "I Wicemistrz Polski", sub: "Indywidualne MP w skacie (kat. „O”)", icon: "trophy", highlight: true },
-        { value: "1993", label: "II Wicemistrz Polski", sub: "Drugie z rzędu podium krajowego czempionatu", icon: "medal", highlight: true },
+        { value: "1992", label: "Mistrz Polski", sub: "Indywidualne MP w skacie (kat. „O”)", icon: "trophy", highlight: true },
+        { value: "1993", label: "Mistrz Polski", sub: "Drugie z rzędu mistrzostwo kraju", icon: "medal", highlight: true },
         { value: "2005", label: "Złota Odznaka PZSkat", sub: "Przyznana na 80-lecie KS Unia Bieruń Stary", icon: "award", highlight: true },
         { value: "2", label: "Dyscypliny Sportowe", sub: "Piłka nożna (II liga) oraz skat sportowy", icon: "layers", highlight: false }
       ],
@@ -176,16 +186,16 @@ window.HALL_OF_FAME_DATA = {
         },
         {
           year: "1992",
-          badge: "Srebrny Medal MP",
-          title: "I Wicemistrz Polski w Skacie Sportowym",
-          desc: "Srebrny medal Indywidualnych Mistrzostw Polski w prestiżowej kategorii ogólnej („O”) w barwach Unii Bieruń Stary.",
+          badge: "Złoty Medal MP",
+          title: "Mistrz Polski w Skacie Sportowym",
+          desc: "Tytuł Mistrza Polski w Indywidualnych Mistrzostwach Polski w prestiżowej kategorii ogólnej („O”) w barwach Unii Bieruń Stary.",
           icon: "trophy"
         },
         {
           year: "1993",
-          badge: "Brązowy Medal MP",
-          title: "II Wicemistrz Polski w Skacie Sportowym",
-          desc: "Potwierdzenie przynależności do ścisłej krajowej elity drugim z rzędu miejscem na podium Mistrzostw Polski.",
+          badge: "Złoty Medal MP",
+          title: "Mistrz Polski w Skacie Sportowym",
+          desc: "Potwierdzenie przynależności do ścisłej krajowej elity drugim z rzędu tytułem Mistrza Polski.",
           icon: "medal"
         },
         {
@@ -198,9 +208,9 @@ window.HALL_OF_FAME_DATA = {
       ],
       achievements: [
         { year: "Lata 70.", title: "Zawodnik II-ligowych drużyn piłkarskich: Włókniarza Pabianice oraz Ruchu Chorzów", tier: "silver" },
-        { year: "1992", title: "I Wicemistrz Polski w Indywidualnych Mistrzostwach Polski w skacie (kategoria ogólna „O”)", tier: "silver" },
-        { year: "1993", title: "II Wicemistrz Polski w Indywidualnych Mistrzostwach Polski w skacie (kategoria ogólna „O”)", tier: "bronze" },
-        { year: "2005", title: "Złota Odznaka Polskiego Związku Skata z okazji 80-lecia KS Unia Bieruń Stary", tier: "gold" }
+        { year: "1992", title: "Mistrz Polski w Indywidualnych Mistrzostwach Polski w skacie (kategoria ogólna „O”)", tier: "gold" },
+        { year: "1993", title: "Mistrz Polski w Indywidualnych Mistrzostwach Polski w skacie (kategoria ogólna „O”)", tier: "gold" },
+        { year: "2005", title: "Złota Odznaka Polskiego Związku Skata z okazji 80-lecia KS Unia Bieruń Stary", tier: "honor" }
       ],
       gallery: [
         { src: "assets/athletes/pawel_latocha/hero_portret.jpg", title: "Śp. Paweł Latocha (1949–2021)", caption: "Portret pamiątkowy wybitnego zawodnika sekcji skatowej Unii Bieruń Stary i byłego piłkarza.", type: "archival" }
