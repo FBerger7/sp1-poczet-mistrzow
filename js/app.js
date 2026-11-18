@@ -676,21 +676,6 @@
     const patron = DATA.school.patron;
     if (!patron) return "";
 
-    const highlightsHTML = (patron.highlights || [])
-      .map(
-        (h) => `
-        <div class="bento-card rounded-2xl p-4 flex items-center gap-3.5">
-          <div class="w-10 h-10 rounded-xl bg-amber-500/15 border border-amber-400/30 flex items-center justify-center text-amber-300 shrink-0">
-            <i data-lucide="${h.icon}" class="w-5 h-5"></i>
-          </div>
-          <div class="min-w-0">
-            <div class="text-[11px] uppercase tracking-wider text-slate-400">${h.label}</div>
-            <div class="text-sm font-bold text-white truncate">${h.value}</div>
-          </div>
-        </div>`
-      )
-      .join("");
-
     return `
       <section id="section-patron" data-slide-section="section-patron" data-section-era="amber" class="py-20 px-4 lg:px-8 border-t border-white/10 relative">
         <div class="max-w-[1360px] mx-auto">
@@ -709,7 +694,7 @@
 
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
             <!-- Left: Prof. Krzysztof Ficek Card -->
-            <div class="lg:col-span-6 bento-card rounded-3xl p-6 sm:p-8 flex flex-col justify-between gap-6 gsap-reveal">
+            <div class="lg:col-span-6 bento-card rounded-3xl p-6 sm:p-8 flex flex-col justify-center gap-6 gsap-reveal">
               <div class="flex flex-col sm:flex-row items-start sm:items-center gap-6">
                 <a
                   href="${patron.portrait}"
@@ -741,10 +726,6 @@
                     ${patron.mission}
                   </p>
                 </div>
-              </div>
-
-              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
-                ${highlightsHTML}
               </div>
             </div>
 
