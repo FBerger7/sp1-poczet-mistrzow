@@ -138,7 +138,7 @@ window.HALL_OF_FAME_DATA = {
       storySections: [
         {
           heading: "Od piłkarskich boisk II ligi do Mistrza Skata Sportowego",
-          body: "Podobnie jak starszy brat Henryk, swoją sportową drogę zaczynał od piłki nożnej. Boiskowy talent i pracowitość zaprowadziły go do renomowanych klubów ogólnopolskich – występował w drugoligowych zespołach Włókniarza Pabianice oraz chorzowskiego Ruchu, rywalizując na zapleczu najwyższej klasy rozgrywkowej w Polsce."
+          body: "Swoją sportową drogę zaczynał od piłki nożnej. Boiskowy talent i pracowitość zaprowadziły go do renomowanych klubów ogólnopolskich – występował w drugoligowych zespołach Włókniarza Pabianice oraz chorzowskiego Ruchu, rywalizując na zapleczu najwyższej klasy rozgrywkowej w Polsce."
         },
         {
           heading: "Mistrzowska strategia i dwa podia Mistrzostw Polski",
