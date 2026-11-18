@@ -143,60 +143,60 @@ window.HALL_OF_FAME_DATA = {
       eraTheme: "amber",
       name: "śp. Paweł Latocha",
       nationalChampionBadge: null, // Do weryfikacji
-      titleRole: "Piłkarz Ligowy i Mistrz Skata Sportowego",
+      titleRole: "Piłkarz Ligowy i Zdobywca Grand Prix Polski w Skacie Sportowym",
       discipline: "Piłka Nożna & Skat Sportowy",
       disciplineIcon: "spade",
       birthDate: "ur. 21 czerwca 1949 r. – zm. 24 sierpnia 2021 r.",
       schoolYears: "Absolwent Szkoły Podstawowej nr 1 w Bieruniu (lata 50./60.)",
-      clubs: ["Unia Bieruń Stary", "Ruch Chorzów", "Włókniarz Pabianice"],
-      honors: ["Złota Odznaka Polskiego Związku Skata (2005)", "Mistrz Polski w Skacie Sportowym"],
+      clubs: ["Unia Bieruń Stary", "Włókniarz Pabianice", "Star Starachowice", "Ruch Chorzów", "ROW Rybnik", "Concordia Knurów", "Walcownia Czechowice", "Polonia Łaziska Górne"],
+      honors: ["Zdobywca Grand Prix Polski w Skacie (1993)", "Dwukrotny Wicemistrz Polski w Skacie (1992, 1993)", "Złota Odznaka Polskiego Związku Skata (2005)"],
       heroImage: "assets/athletes/pawel_latocha/hero_portret.jpg",
       heroCaption: "Śp. Paweł Latocha (1949–2021) – sportowiec dwóch pasji: boisk piłkarskich oraz mistrzowskiej strategii skata.",
       heroFrameType: "memorial-gold",
       isSinglePhotoTrophyLayout: true,
-      lead: "Sportowiec o niezwykłej, dwutorowej drodze życiowej. Zaczynał na ligowych murawach jako utalentowany piłkarz Ruchu Chorzów i Włókniarza Pabianice, by w kolejnych dekadach stać się jednym z najbardziej utytułowanych zawodników skata sportowego w Polsce, rozsławiając barwy Unii Bieruń Stary.",
+      lead: "Sportowiec o niezwykłej, dwutorowej drodze życiowej. Zaczynał na boiskach II ligi w barwach Włókniarza Pabianice i Staru Starachowice oraz renomowanych śląskich klubów z Ruchem Chorzów i ROW-em Rybnik na czele, by w kolejnych latach sięgnąć po najcenniejsze trofeum polskiego skata – Grand Prix Polski (1993) – i rozsławić sekcję skatową Unii Bieruń Stary.",
       storySections: [
         {
-          heading: "Od piłkarskich boisk II ligi do Mistrza Skata Sportowego",
-          body: "Swoją sportową drogę zaczynał od piłki nożnej. Boiskowy talent i pracowitość zaprowadziły go do renomowanych klubów ogólnopolskich – występował w drugoligowych zespołach Włókniarza Pabianice oraz chorzowskiego Ruchu, rywalizując na zapleczu najwyższej klasy rozgrywkowej w Polsce."
+          heading: "Od drugoligowych boisk do śląskiej tradycji skata",
+          body: "Podobnie jak wielu młodych chłopców na Górnym Śląsku, swoją przygodę ze sportem zaczynał od piłki nożnej. Dzięki dużemu talentowi szybko trafił do klubów wyższych lig: występował w II-ligowych zespołach Włókniarza Pabianice oraz Staru Starachowice, a następnie reprezentował barwy Ruchu Chorzów, ROW-u Rybnik, Concordii Knurów, Walcowni Czechowice i Polonii Łaziska Górne. Po zakończeniu kariery piłkarskiej oddał się tradycyjnej śląskiej grze w skata, w którego w Bieruniu Starym grywano wówczas na grobli, w Zakładowym Domu Kultury na Osiedlu czy w dawnym ośrodku „Nowoczesna Gospodyni” obok restauracji „Stylowa”. Szybko wyrósł na czołowego zawodnika regionu i objął prowadzenie lokalnej sekcji skata."
         },
         {
-          heading: "Mistrzowska strategia i tytuł Mistrza Polski",
-          body: "Po zakończeniu kariery piłkarskiej odnalazł nową przestrzeń sportowej rywalizacji w skacie sportowym – dyscyplinie głęboko zakorzenionej w śląskiej tradycji, wymagającej pamięci matematycznej, psychologii i żelaznej koncentracji. Reprezentując sekcję skatową klubu Unia Bieruń Stary, w 1992 i 1993 roku sięgał po tytuł Mistrza Polski w Indywidualnych Mistrzostwach Polski w kategorii ogólnej („O”)."
+          heading: "Najlepszy w Polsce (1993) – Grand Prix i podia Mistrzostw Polski",
+          body: "Lata turniejowej praktyki, ambicja i sportowa dyscyplina zaprowadziły go na sam szczyt krajowych rozgrywek. W 1989 roku zajął 2. miejsce w silnie obsadzonym turnieju Porozumienia Związków Zawodowych w Tarnowskich Górach – Strzybnicy (w stawce 600 zawodników). W latach 1992 i 1993 był dwukrotnym Wicemistrzem Polski, a w 1992 roku wywalczył także tytuł Wicemistrza Grand Prix. Rok 1993 przyniósł mu miano najlepszego zawodnika w kraju: zdobył najcenniejsze trofeum skatowe – Grand Prix Polski, zwyciężył w Centralnym Turnieju Barbórkowym w Katowicach oraz zajął 3. miejsce w turnieju Indywidualnych Mistrzostw Polski (wśród 312 uczestników). Znakomitą formę potwierdził na przełomie 1993 i 1994 roku w cyklu czterech dużych turniejów KS Unia (w restauracji „Stylowa” i kinoteatrze „Jutrzenka”), wygrywając największy z nich – 23 stycznia w gronie 72 graczy."
         },
         {
           heading: "Złota Odznaka na 80-lecie Unii Bieruń Stary",
-          body: "W 2005 roku, podczas uroczystych obchodów 80-lecia istnienia klubu Unia Bieruń Stary, za wieloletnie sukcesy i wkład w rozwój dyscypliny został uhonorowany najwyższym wyróżnieniem związkowym – Złotą Odznaką Polskiego Związku Skata. Pozostał w pamięci lokalnej społeczności jako wzór sportowej kultury i pasji."
+          body: "W 2005 roku, podczas uroczystych obchodów 80-lecia istnienia klubu Unia Bieruń Stary, za wieloletnie sukcesy, prowadzenie sekcji i wkład w rozwój dyscypliny został uhonorowany najwyższym wyróżnieniem związkowym – Złotą Odznaką Polskiego Związku Skata. Pozostał w pamięci lokalnej społeczności jako wzór sportowej kultury i pasji."
         }
       ],
       quote: null,
       bentoStats: [
-        { value: "1992", label: "Mistrz Polski", sub: "Indywidualne MP w skacie (kat. „O”)", icon: "trophy", highlight: true },
-        { value: "1993", label: "Mistrz Polski", sub: "Drugie z rzędu mistrzostwo kraju", icon: "medal", highlight: true },
-        { value: "2005", label: "Złota Odznaka PZSkat", sub: "Przyznana na 80-lecie KS Unia Bieruń Stary", icon: "award", highlight: true },
-        { value: "2", label: "Dyscypliny Sportowe", sub: "Piłka nożna (II liga) oraz skat sportowy", icon: "layers", highlight: false }
+        { value: "1993", label: "Grand Prix Polski", sub: "Najlepszy zawodnik w kraju • Triumf w Barbórkowym", icon: "trophy", highlight: true },
+        { value: "1992–93", label: "2× Wicemistrz Polski", sub: "Oraz Wicemistrz Grand Prix (1992) i 3. m. IMP (312 zaw.)", icon: "medal", highlight: true },
+        { value: "600", label: "Rywali w Strzybnicy", sub: "2. miejsce w turnieju PZZ (1989)", icon: "flame", highlight: false },
+        { value: "2005", label: "Złota Odznaka PZSkat", sub: "Przyznana na 80-lecie KS Unia Bieruń Stary", icon: "award", highlight: true }
       ],
       trophyCabinet: [
         {
           year: "Lata 70.",
           badge: "Etap I • Murawa",
-          title: "Piłkarz Ruchu Chorzów i Włókniarza Pabianice",
-          desc: "Występy na szczeblu centralnym (II liga) po wychowaniu w macierzystym środowisku sportowym Bierunia.",
+          title: "Piłkarz II ligi i klubów śląskich",
+          desc: "Występy w Włókniarzu Pabianice, Starze Starachowice, Ruchu Chorzów, ROW-ie Rybnik, Concordii Knurów, Walcowni Czechowice i Polonii Łaziska Górne.",
           icon: "shield"
         },
         {
-          year: "1992",
-          badge: "Złoty Medal MP",
-          title: "Mistrz Polski w Skacie Sportowym",
-          desc: "Tytuł Mistrza Polski w Indywidualnych Mistrzostwach Polski w prestiżowej kategorii ogólnej („O”) w barwach Unii Bieruń Stary.",
-          icon: "trophy"
+          year: "1992–1993",
+          badge: "Medale Krajowe",
+          title: "Dwukrotny Wicemistrz Polski i Wicemistrz Grand Prix",
+          desc: "Dwa z rzędu tytuły Wicemistrza Polski (1992, 1993), wicemistrzostwo Grand Prix (1992) oraz 3. miejsce w turnieju IMP wśród 312 zawodników.",
+          icon: "medal"
         },
         {
           year: "1993",
-          badge: "Złoty Medal MP",
-          title: "Mistrz Polski w Skacie Sportowym",
-          desc: "Potwierdzenie przynależności do ścisłej krajowej elity drugim z rzędu tytułem Mistrza Polski.",
-          icon: "medal"
+          badge: "Najcenniejsze Trofeum",
+          title: "Zdobywca Grand Prix Polski i Turnieju Barbórkowego",
+          desc: "Uznany za najlepszego zawodnika w Polsce w 1993 roku; zwycięzca Centralnego Turnieju Barbórkowego w Katowicach oraz turnieju KS Unia (72 graczy).",
+          icon: "trophy"
         },
         {
           year: "2005",
@@ -207,9 +207,12 @@ window.HALL_OF_FAME_DATA = {
         }
       ],
       achievements: [
-        { year: "Lata 70.", title: "Zawodnik II-ligowych drużyn piłkarskich: Włókniarza Pabianice oraz Ruchu Chorzów", tier: "silver" },
-        { year: "1992", title: "Mistrz Polski w Indywidualnych Mistrzostwach Polski w skacie (kategoria ogólna „O”)", tier: "gold" },
-        { year: "1993", title: "Mistrz Polski w Indywidualnych Mistrzostwach Polski w skacie (kategoria ogólna „O”)", tier: "gold" },
+        { year: "Lata 70.", title: "Zawodnik II-ligowych zespołów Włókniarza Pabianice i Staru Starachowice oraz Ruchu Chorzów, ROW-u Rybnik, Concordii Knurów, Walcowni Czechowice i Polonii Łaziska Górne", tier: "silver" },
+        { year: "1989", title: "2. miejsce w silnie obsadzonym turnieju Porozumienia Związków Zawodowych w Tarnowskich Górach – Strzybnicy (600 zawodników)", tier: "silver" },
+        { year: "1992", title: "Wicemistrz Polski w Indywidualnych Mistrzostwach Polski w skacie oraz Wicemistrz Grand Prix Polski", tier: "silver" },
+        { year: "1993", title: "Zdobywca Grand Prix Polski w skacie (najlepszy zawodnik w kraju) oraz zwycięzca Centralnego Turnieju Barbórkowego w Katowicach", tier: "gold" },
+        { year: "1993", title: "Wicemistrz Polski w skacie oraz 3. miejsce w turnieju Indywidualnych Mistrzostw Polski (wśród 312 zawodników)", tier: "bronze" },
+        { year: "1993/1994", title: "Zwycięzca największego turnieju (23 stycznia, 72 zawodników) w cyklu czterech zawodów KS Unia Bieruń Stary", tier: "gold" },
         { year: "2005", title: "Złota Odznaka Polskiego Związku Skata z okazji 80-lecia KS Unia Bieruń Stary", tier: "honor" }
       ],
       gallery: [
