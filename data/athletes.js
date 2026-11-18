@@ -37,7 +37,22 @@ window.HALL_OF_FAME_DATA = {
         description: "Współcześni reprezentanci Polski: ekstremalne ewolucje BMX Freestyle na Igrzyskach Europejskich oraz medale Mistrzostw Europy i Polski Elity w badmintonie.",
         theme: "emerald"
       }
-    ]
+    ],
+    patron: {
+      badge: "Inicjatywa i Fundator Tablic Pamiątkowych",
+      name: "prof. dr hab. n. med. Krzysztof Ficek",
+      role: "Ortopeda, traumatolog i specjalista medycyny sportowej • Założyciel i prezes Centrum Medycznego Galen-Ortopedia w Bieruniu",
+      portrait: "assets/patron/prof_krzysztof_ficek.jpg",
+      plaquesImage: "assets/patron/tablice_placeholder.jpg",
+      plaquesTitle: "Stałe tablice pamiątkowe w Szkole Podstawowej nr 1 w Bieruniu",
+      bio: "Wybitny lekarz ortopeda i traumatolog narządu ruchu, profesor nauk medycznych i nauk o zdrowiu oraz wykładowca akademicki związany z AWF w Katowicach. Jako założyciel i prezes mieszczącego się w Bieruniu ośrodka Galen-Ortopedia, a także wieloletni lekarz kadr narodowych i członek polskich misji medycznych na Igrzyskach Olimpijskich, od dekad wspiera polskich mistrzów i dba o zdrowie sportowców.",
+      mission: "Z inicjatywy i dzięki wsparciu prof. dr hab. n. med. Krzysztofa Ficka w murach Szkoły Podstawowej nr 1 w Bieruniu powstaje stała ekspozycja tablic pamiątkowych honorujących naszych Wybitnych Absolwentów. Celem przedsięwzięcia jest trwałe docenienie ich osiągnięć, wyrażenie uznania dla lat ciężkiej pracy oraz zachowanie pamięci o lokalnych mistrzach – tak, aby ich postawa inspirowała kolejne pokolenia uczniów.",
+      highlights: [
+        { label: "Ośrodek w Bieruniu", value: "Galen-Ortopedia", icon: "heart-pulse" },
+        { label: "Opieka nad Mistrzami", value: "Misje Olimpijskie", icon: "shield-check" },
+        { label: "Stała Ekspozycja", value: "Tablice w SP nr 1", icon: "landmark" }
+      ]
+    }
   },
 
   athletes: [

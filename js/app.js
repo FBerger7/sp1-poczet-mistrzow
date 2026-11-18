@@ -221,6 +221,23 @@
               aż po współczesne podia Mistrzostw Europy. Poznaj historie ośmiu absolwentów naszej szkoły,
               którzy swoją pasją i determinacją zapisali się w historii polskiego sportu.
             </p>
+
+            ${
+              DATA.school.patron
+                ? `
+            <div class="mt-6 flex justify-center">
+              <button
+                type="button"
+                data-jump-target="section-patron"
+                class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white/[0.04] hover:bg-amber-500/15 border border-white/15 hover:border-amber-400/50 text-xs sm:text-sm text-slate-300 hover:text-amber-200 transition-all group"
+              >
+                <i data-lucide="landmark" class="w-4 h-4 text-amber-400 shrink-0"></i>
+                <span>Inicjatywa i fundator tablic pamiątkowych: <strong class="text-white group-hover:text-amber-200">${DATA.school.patron.name}</strong></span>
+                <i data-lucide="arrow-down" class="w-3.5 h-3.5 text-amber-400/80 group-hover:translate-y-0.5 transition-transform"></i>
+              </button>
+            </div>`
+                : ""
+            }
           </div>
 
           <!-- 4 Summary Bento Cards -->
@@ -653,7 +670,126 @@
   }
 
   // ==========================================================================
-  // 5. EPILOGUE / CEREMONIAL FINALE (SCENE 9)
+  // 5. PATRON & COMMEMORATIVE PLAQUES INITIATIVE SECTION
+  // ==========================================================================
+  function renderPatronSection() {
+    const patron = DATA.school.patron;
+    if (!patron) return "";
+
+    const highlightsHTML = (patron.highlights || [])
+      .map(
+        (h) => `
+        <div class="bento-card rounded-2xl p-4 flex items-center gap-3.5">
+          <div class="w-10 h-10 rounded-xl bg-amber-500/15 border border-amber-400/30 flex items-center justify-center text-amber-300 shrink-0">
+            <i data-lucide="${h.icon}" class="w-5 h-5"></i>
+          </div>
+          <div class="min-w-0">
+            <div class="text-[11px] uppercase tracking-wider text-slate-400">${h.label}</div>
+            <div class="text-sm font-bold text-white truncate">${h.value}</div>
+          </div>
+        </div>`
+      )
+      .join("");
+
+    return `
+      <section id="section-patron" data-slide-section="section-patron" data-section-era="amber" class="py-20 px-4 lg:px-8 border-t border-white/10 relative">
+        <div class="max-w-[1360px] mx-auto">
+          <div class="mb-10 gsap-reveal">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-mono-stat uppercase tracking-widest border bg-amber-500/15 text-amber-300 border-amber-500/35 mb-3">
+              <i data-lucide="landmark" class="w-3.5 h-3.5"></i>
+              <span>${patron.badge}</span>
+            </div>
+            <h2 class="font-serif-ceremonial text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight">
+              Pamięć i Uznanie w Murach Szkoły
+            </h2>
+            <p class="text-base sm:text-lg text-slate-300/90 mt-2 max-w-3xl">
+              Projekt „Poczet Wybitnych Sportowców” towarzyszy trwałemu upamiętnieniu naszych Mistrzów poprzez stałą ekspozycję tablic pamiątkowych w Szkole Podstawowej nr 1 w Bieruniu.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+            <!-- Left: Prof. Krzysztof Ficek Card -->
+            <div class="lg:col-span-6 bento-card rounded-3xl p-6 sm:p-8 flex flex-col justify-between gap-6 gsap-reveal">
+              <div class="flex flex-col sm:flex-row items-start sm:items-center gap-6">
+                <a
+                  href="${patron.portrait}"
+                  class="glightbox shrink-0 group relative rounded-2xl overflow-hidden border-2 border-amber-400/50 shadow-xl w-36 h-36 sm:w-40 sm:h-40 bg-slate-900 cursor-zoom-in"
+                  data-gallery="gallery-patron"
+                  data-glightbox="title: ${patron.name}"
+                >
+                  <img src="${patron.portrait}" alt="${patron.name}" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
+                </a>
+
+                <div>
+                  <div class="text-xs uppercase tracking-[0.2em] text-amber-400 font-semibold mb-1">Fundator i Inicjator</div>
+                  <h3 class="font-serif-ceremonial text-2xl sm:text-3xl font-bold text-white leading-tight">
+                    ${patron.name}
+                  </h3>
+                  <p class="text-xs sm:text-sm text-amber-200/90 mt-2 leading-relaxed">
+                    ${patron.role}
+                  </p>
+                </div>
+              </div>
+
+              <div class="space-y-4 pt-4 border-t border-white/10">
+                <p class="text-sm sm:text-base text-slate-200/90 leading-relaxed">
+                  ${patron.bio}
+                </p>
+                <div class="p-4 sm:p-5 rounded-2xl bg-amber-500/[0.06] border-l-4 border-amber-400">
+                  <div class="text-xs uppercase tracking-widest text-amber-400 font-semibold mb-1.5">Cel i idea ufundowania tablic</div>
+                  <p class="text-sm sm:text-base text-white/95 leading-relaxed">
+                    ${patron.mission}
+                  </p>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+                ${highlightsHTML}
+              </div>
+            </div>
+
+            <!-- Right: Commemorative Plaques Photo Slot (TBD Placeholder) -->
+            <div class="lg:col-span-6 bento-card rounded-3xl p-6 sm:p-8 flex flex-col justify-between gap-5 gsap-reveal">
+              <div class="flex flex-wrap items-center justify-between gap-2 pb-4 border-b border-white/10">
+                <div>
+                  <div class="text-xs uppercase tracking-[0.2em] text-amber-400 font-semibold">Ekspozycja Szkolna</div>
+                  <h3 class="font-serif-ceremonial text-2xl sm:text-3xl font-bold text-white mt-0.5">
+                    Stałe Tablice Pamiątkowe w SP nr 1
+                  </h3>
+                </div>
+                <span class="px-3 py-1 rounded-full text-xs font-mono-stat font-semibold bg-amber-500/15 text-amber-300 border border-amber-400/40">
+                  TBD • Wkrótce
+                </span>
+              </div>
+
+              <a
+                href="${patron.plaquesImage}"
+                class="glightbox gallery-item-card block rounded-2xl overflow-hidden border border-amber-400/30 bg-slate-950 relative group flex-1 min-h-[280px] sm:min-h-[340px]"
+                data-gallery="gallery-patron"
+                data-glightbox="title: ${patron.plaquesTitle}"
+              >
+                <img
+                  src="${patron.plaquesImage}"
+                  alt="${patron.plaquesTitle}"
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div class="absolute top-3 right-3 w-9 h-9 rounded-full bg-slate-950/75 border border-white/20 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity">
+                  <i data-lucide="zoom-in" class="w-4 h-4"></i>
+                </div>
+              </a>
+
+              <p class="text-xs sm:text-sm text-slate-300/90 leading-relaxed">
+                W tym miejscu po uroczystym odsłonięciu pojawi się fotografia pamiątkowych tablic umieszczonych na stałe w budynku Szkoły Podstawowej nr 1 w Bieruniu.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    `;
+  }
+
+  // ==========================================================================
+  // 6. EPILOGUE / CEREMONIAL FINALE
   // ==========================================================================
   function renderEpilogue() {
     const portraitsCircle = DATA.athletes
@@ -736,7 +872,7 @@
       mainContent += renderAthleteSection(athlete);
     });
 
-    mainContent += renderEpilogue() + `</main>`;
+    mainContent += renderPatronSection() + renderEpilogue() + `</main>`;
     appRoot.innerHTML = mainContent;
 
     // Collect ordered slide sections for Ceremony Mode (Prologue + 8 Athletes + Epilogue = 10 scenes)
