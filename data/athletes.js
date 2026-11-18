@@ -70,11 +70,11 @@ window.HALL_OF_FAME_DATA = {
         },
         {
           heading: "Pojedynki z George’em Bestem i europejski finał w Wiedniu",
-          body: "Jako niezwykle zdyscyplinowany i nieustępliwy obrońca zasłynął w pamiętnych pucharowych bataliach z Dynamem Kijów oraz słynnym Manchesterem United, podczas których skutecznie zneutralizował zdobywcę Złotej Piłki – George’a Besta. Jego klasę docenił selekcjoner reprezentacji Polski: 1 maja 1968 roku zadebiutował w kadrze narodowej w meczu z Holandią, rozgrywając łącznie 8 oficjalnych spotkań w biało-czerwonych barwach. W 1970 roku wystąpił w jedynym w historii polskiej piłki klubowej finale europejskich pucharów – przeciwko Manchesterowi City w finale Pucharu Zdobywców Pucharów."
+          body: "Jako niezwykle zdyscyplinowany i nieustępliwy obrońca zasłynął w pamiętnych pucharowych bataliach z Dynamem Kijów oraz słynnym Manchesterem United, podczas których skutecznie zneutralizował zdobywcę Złotej Piłki – George’a Besta. Jego klasę docenił selekcjoner reprezentacji Polski: 1 maja 1968 roku zadebiutował w kadrze narodowej w meczu z Holandią, rozgrywając łącznie 8 oficjalnych spotkań w biało-czerwonych barwach. W 1970 roku wystąpił w jedynym, w historii polskiej piłki klubowej, finale europejskich pucharów – przeciwko Manchesterowi City w finale Pucharu Zdobywców Pucharów."
         },
         {
           heading: "Wiedeński rozdział i filmowy benefis „Helmut”",
-          body: "Po ukończeniu 30. roku życia wyjechał do austriackiego Rapidu Wiedeń, a stolica Austrii stała się jego domem na kolejne 28 lat. Nigdy jednak nie zapomniał o rodzinnych stronach. W czerwcu 2023 roku w Bieruniu odbył się uroczysty benefis z okazji jego 80. urodziny, uświetniony premierą filmu dokumentalnego „Helmut” w reżyserii Wojciecha Wikarka. W tym samym roku otrzymał tytuł „Zasłużony dla Miasta Bierunia” oraz Złoty Medal PZPN."
+          body: "Po ukończeniu 30. roku życia wyjechał do austriackiego Rapidu Wiedeń, a stolica Austrii stała się jego domem na kolejne 28 lat. Nigdy jednak nie zapomniał o rodzinnych stronach. W czerwcu 2023 roku w Bieruniu odbył się uroczysty benefis z okazji jego 80. urodzin, uświetniony premierą filmu dokumentalnego „Helmut” w reżyserii Wojciecha Wikarka. W tym samym roku otrzymał tytuł „Zasłużony dla Miasta Bierunia” oraz Złoty Medal PZPN."
         }
       ],
       quote: {
@@ -137,7 +137,7 @@ window.HALL_OF_FAME_DATA = {
       lead: "Sportowiec o niezwykłej, dwutorowej drodze życiowej. Zaczynał na ligowych murawach jako utalentowany piłkarz Ruchu Chorzów i Włókniarza Pabianice, by w kolejnych dekadach stać się jednym z najbardziej utytułowanych zawodników skata sportowego w Polsce, rozsławiając barwy Unii Bieruń Stary.",
       storySections: [
         {
-          heading: "Od piłkarskich boisk II ligi",
+          heading: "Od piłkarskich boisk II ligi do Mistrza Skata Sportowego",
           body: "Podobnie jak starszy brat Henryk, swoją sportową drogę zaczynał od piłki nożnej. Boiskowy talent i pracowitość zaprowadziły go do renomowanych klubów ogólnopolskich – występował w drugoligowych zespołach Włókniarza Pabianice oraz chorzowskiego Ruchu, rywalizując na zapleczu najwyższej klasy rozgrywkowej w Polsce."
         },
         {
@@ -231,7 +231,7 @@ window.HALL_OF_FAME_DATA = {
         },
         {
           heading: "Przerwana kariera i państwowe odznaczenie",
-          body: "Jej świetnie rozwijającą się karierę zawodniczą przerwał dramatyczny wypadek drogowy z 16 października w okolicach miejscowości Suchoraba, do którego doszło podczas podróży drużyny na ligowe spotkanie do Tarnowa. Mimo przedwczesnego zakończenia gry, jej dorobek na trwałe wpisał się w historię śląskiego sportu. W 2005 roku podczas uroczystej sesji z okazji 80-lecia Unii Bieruń Stary została udekorowana Srebrnym Krzyżem Zasługi przyznanym przez Prezydenta RP."
+          body: "Jej świetnie rozwijającą się karierę zawodniczą przerwał dramatyczny wypadek drogowy 16 października w okolicach miejscowości Suchowola, do którego doszło podczas podróży drużyny na ligowe spotkanie do Tarnowa. Mimo przedwczesnego zakończenia gry, jej dorobek na trwałe wpisał się w historię śląskiego sportu. W 2005 roku, podczas uroczystej sesji, z okazji 80-lecia Unii Bieruń Stary została udekorowana Srebrnym Krzyżem Zasługi przyznanym przez Prezydenta RP."
         }
       ],
       quote: {
@@ -287,7 +287,7 @@ window.HALL_OF_FAME_DATA = {
       birthDate: "ur. 30 stycznia 1960 r.",
       schoolYears: "Absolwent Szkoły Podstawowej nr 1 w Bieruniu (1967–1975)",
       clubs: ["Unia Bieruń Stary", "VfL 93 Hamburg (Bundesliga)", "BC 68 Hamburg"],
-      honors: ["Złoty Krzyż Zasługi RP", "18 Medali Mistrzostw Polski Seniorów"],
+      honors: ["Srebrny Krzyż Zasługi RP", "18 Medali Mistrzostw Polski Seniorów"],
       heroImage: "assets/athletes/brunon_rduch/portret_yonex.jpg",
       heroCaption: "Brunon Rduch w barwach klubowych i trenerskich – pionier bieruńskiego badmintona.",
       heroFrameType: "archival-gold",
@@ -302,8 +302,8 @@ window.HALL_OF_FAME_DATA = {
           body: "W 1979 roku wywalczył swój pierwszy tytuł Indywidualnego Mistrza Polski Seniorów w grze pojedynczej. Dwa lata później (1981) we Wrocławiu zdominował krajowy czempionat, zdobywając podwójną koronę: złoto w singlu oraz złoto w grze podwójnej mężczyzn, a także srebro w mikście. Łącznie w latach 1976–1986 zgromadził imponującą kolekcję 18 medali Mistrzostw Polski Seniorów (3 złote, 7 srebrnych i 8 brązowych) oraz wielokrotnie reprezentował Polskę na arenie międzynarodowej."
         },
         {
-          heading: "Bundesliga, ośrodek olimpijski w Hamburgu i Złoty Krzyż Zasługi",
-          body: "Po wyjeździe do Niemiec w 1986 roku występował na poziomie niemieckiej Bundesligi w barwach klubu VfL 93 Hamburg. Po zakończeniu kariery zawodniczej uzyskał najwyższą licencję trenerską klasy A: przez 10 lat szkolił kadry w ośrodku wyczynowym (Landesleistungszentrum) przy Olimpijskim Ośrodku Przygotowań w Hamburgu-Dulsbergu i przez ponad 30 lat wychowywał młodzież. Za wybitne zasługi w integrowaniu środowiska polonijnego poprzez sport został odznaczony przez Prezydenta RP Złotym Krzyżem Zasługi."
+          heading: "Bundesliga, ośrodek olimpijski w Hamburgu i Srebrny Krzyż Zasługi",
+          body: "Po wyjeździe do Niemiec w 1986 roku występował na poziomie niemieckiej Bundesligi w barwach klubu VfL 93 Hamburg. Po zakończeniu kariery zawodniczej uzyskał najwyższą licencję trenerską klasy A: przez 10 lat szkolił kadry w ośrodku wyczynowym (Landesleistungszentrum) przy Olimpijskim Ośrodku Przygotowań w Hamburgu-Dulsbergu i przez ponad 30 lat wychowywał młodzież. Za wybitne zasługi w integrowaniu środowiska polonijnego poprzez sport został odznaczony przez Prezydenta RP Srebrnym Krzyżem Zasługi."
         }
       ],
       quote: {
@@ -314,7 +314,7 @@ window.HALL_OF_FAME_DATA = {
         { value: "18", label: "Medali MP Seniorów", sub: "3 złote • 7 srebrnych • 8 brązowych (1976–1986)", icon: "trophy", highlight: true },
         { value: "5×", label: "Złoto MP Juniorów", sub: "Oraz 3× Drużynowy Mistrz Polski Juniorów", icon: "award", highlight: true },
         { value: "30+", label: "Lat Pracy Trenerskiej", sub: "Licencja klasy A • Ośrodek Olimpijski w Hamburgu", icon: "users", highlight: false },
-        { value: "RP", label: "Złoty Krzyż Zasługi", sub: "Odznaczenie Prezydenta Rzeczypospolitej Polskiej", icon: "star", highlight: true }
+        { value: "RP", label: "Srebrny Krzyż Zasługi", sub: "Odznaczenie Prezydenta Rzeczypospolitej Polskiej", icon: "star", highlight: true }
       ],
       achievements: [
         { year: "1974/1975", title: "Mistrz Polski Młodzików (do lat 15) w barwach Unii Bieruń Stary", tier: "gold" },
@@ -323,7 +323,7 @@ window.HALL_OF_FAME_DATA = {
         { year: "1981", title: "Podwójny Mistrz Polski Seniorów (Wrocław): złoto w grze pojedynczej, złoto w deblu i srebro w mikście", tier: "gold" },
         { year: "1976–1986", title: "Łącznie 18 medali Mistrzostw Polski Seniorów (3 złote, 7 srebrnych, 8 brązowych)", tier: "silver" },
         { year: "1993/1994", title: "Zawodnik niemieckiej Bundesligi w barwach VfL 93 Hamburg oraz trener w Ośrodku Olimpijskim w Hamburgu", tier: "honor" },
-        { year: "Odznaczenie RP", title: "Złoty Krzyż Zasługi nadany przez Prezydenta RP za wybitne zasługi polonijne i sportowe", tier: "honor" }
+        { year: "Odznaczenie RP", title: "Srebrny Krzyż Zasługi nadany przez Prezydenta RP za wybitne zasługi polonijne i sportowe", tier: "honor" }
       ],
       gallery: [
         { src: "assets/athletes/brunon_rduch/hero_portret_mlody.jpg", title: "Młody Brunon Rduch", caption: "Portret z lat szkolnych na tle szkolnego tablo.", type: "archival" },
@@ -435,11 +435,11 @@ window.HALL_OF_FAME_DATA = {
       heroImage: "assets/athletes/piotr_leszczynski/skok_zachod_slonca.jpg",
       heroCaption: "Piotr „Leszczonka” Leszczyński podczas spektakularnej ewolucji powietrznej nad rampą.",
       heroFrameType: "modern-emerald",
-      lead: "Od dziecięcych skoków na ziemnej „Górce Chełmeczki” i ramy rowerowej spawanej przez tatę, aż po tytuł Mistrza Polski BMX Freestyle i reprezentowanie biało-czerwonych barw na III Igrzyskach Europejskich Kraków–Małopolska 2023. Na co dzień łączy ekstremalną pasję z odpowiedzialną służbą ratownika górniczego w KWK Piast.",
+      lead: "Od dziecięcych skoków na ziemnej Górce Chełmeczki i ramy rowerowej spawanej przez tatę, aż po tytuł Mistrza Polski BMX Freestyle i reprezentowanie biało-czerwonych barw na III Igrzyskach Europejskich Kraków–Małopolska 2023. Na co dzień łączy ekstremalną pasję z odpowiedzialną służbą ratownika górniczego w KWK Piast.",
       storySections: [
         {
-          heading: "Skocznia na „Górce Chełmeczki” i skatepark w Bieruniu Nowym",
-          body: "Jego trwająca już ponad 21 lat miłość do BMX-a zaczęła się tuż obok rodzinnego domu – na usypanej przez starszych chłopaków skoczni na „Górce Chełmeczki”. Pierwszy rower podarował mu kuzyn, a tata cierpliwie spawał pękającą od skoków ramę. Przełomem okazała się budowa skateparku przy ul. Królowej Jadwigi w Bieruniu Nowym, gdzie po dzwonku szkolnym spędzał z przyjaciółmi długie godziny, szlifując nowe triki oraz współorganizując lokalne zawody z cyklu „BMX BRN Jam”."
+          heading: "Skocznia na Górce Chełmeczki i skatepark w Bieruniu Nowym",
+          body: "Jego trwająca już ponad 21 lat miłość do BMX-a zaczęła się tuż obok rodzinnego domu – na usypanej przez starszych chłopaków skoczni na Górce Chełmeczki. Pierwszy rower podarował mu kuzyn, a tata cierpliwie spawał pękającą od skoków ramę. Przełomem okazała się budowa skateparku przy ul. Królowej Jadwigi w Bieruniu Nowym, gdzie po dzwonku szkolnym spędzał z przyjaciółmi długie godziny, szlifując nowe triki oraz współorganizując lokalne zawody z cyklu „BMX BRN Jam”."
         },
         {
           heading: "Amerykański Woodward, Puchar Świata i Igrzyska Europejskie 2023",
@@ -584,7 +584,7 @@ window.HALL_OF_FAME_DATA = {
         },
         {
           heading: "Charakter silniejszy niż kontuzje",
-          body: "Pomimo zmagań z wymagającymi kontuzjami za każdym razem wracała na kort silniejsza. Po srebrnym medalu Mistrzostw Polski U23 w 2024 roku, w sezonie 2026 wywalczyła aż trzy medale mistrzowskie: złoty medal Mistrzostw Polski U23 w grze pojedynczej, srebrny medal Mistrzostw Polski Elity w grze mieszanej (z Michałem Sobolewskim) oraz brązowy medal MP Elity w singlu."
+          body: "Pomimo zmagań z poważnymi kontuzjami za każdym razem wracała na kort silniejsza. Po srebrnym medalu Mistrzostw Polski U23 w 2024 roku, w sezonie 2026 wywalczyła aż trzy medale mistrzowskie: złoty medal Mistrzostw Polski U23 w grze pojedynczej, srebrny medal Mistrzostw Polski Elity w grze mieszanej (z Michałem Sobolewskim) oraz brązowy medal MP Elity w singlu."
         }
       ],
       quote: {
@@ -598,7 +598,7 @@ window.HALL_OF_FAME_DATA = {
         { value: "MŚ", label: "Reprezentantka w USA", sub: "Mistrzostwa Świata Juniorów (2023)", icon: "star", highlight: false }
       ],
       achievements: [
-        { year: "2019", title: "Brązowa medalistka Mistrzostw Europy U17 w grze pojedynczej (Gniezno) w wieku 14 lat", tier: "bronze" },
+        { year: "2019", title: "Brązowa medalistka Mistrzostw Europy U17 w grze pojedynczej (Gniezno)", tier: "bronze" },
         { year: "2019–2021", title: "Trzykrotna z rzędu złota medalistka Ogólnopolskiej Olimpiady Młodzieży w singlu (2019, 2020, 2021)", tier: "gold" },
         { year: "2021", title: "Wicemistrzyni Europy U17 w grze pojedynczej (Słowenia 2021) oraz tytuł Sportowca Roku Miasta Bierunia", tier: "silver" },
         { year: "2023", title: "Podwójna Mistrzyni Polski Juniorów U19 (w singlu oraz w deblu z Anną Czuchrą) i udział w MŚJ w USA", tier: "gold" },

@@ -218,7 +218,7 @@
 
             <p class="text-base sm:text-lg text-slate-300/90 max-w-2xl mx-auto leading-relaxed font-light">
               Od legendarnych stadionów piłkarskich lat 60., przez olimpijskie tatami w Barcelonie i Atlancie,
-              aż po współczesne podia Mistrzostw Europy. Poznaj historie ośmiorga absolwentów naszej szkoły,
+              aż po współczesne podia Mistrzostw Europy. Poznaj historie ośmiu absolwentów naszej szkoły,
               którzy swoją pasją i determinacją zapisali się w historii polskiego sportu.
             </p>
           </div>
