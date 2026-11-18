@@ -45,7 +45,7 @@ window.HALL_OF_FAME_DATA = {
       portrait: "assets/patron/prof_krzysztof_ficek.jpg",
       plaquesImage: "assets/patron/tablice_placeholder.jpg",
       plaquesTitle: "Stałe tablice pamiątkowe w Szkole Podstawowej nr 1 w Bieruniu",
-      bio: "Lekarz ortopeda i traumatolog narządu ruchu, profesor nauk medycznych i nauk o zdrowiu oraz wykładowca akademicki związany z AWF w Katowicach. Jako założyciel mieszczącego się w Bieruniu ośrodka Galen-Ortopedia, a także wieloletni lekarz kadr narodowych i członek polskich misji medycznych na Igrzyskach Olimpijskich, od dekad wspiera polskich mistrzów i dba o zdrowie sportowców.",
+      bio: "Lekarz ortopeda i traumatolog narządu ruchu, profesor nauk medycznych i nauk o zdrowiu oraz wykładowca akademicki związany z AWF w Katowicach. Jako założyciel i prezes mieszczącego się w Bieruniu ośrodka Galen-Ortopedia, a także wieloletni lekarz kadr narodowych i członek polskich misji medycznych na Igrzyskach Olimpijskich, od dekad wspiera polskich mistrzów i dba o zdrowie sportowców.",
       mission: "Z inicjatywy i dzięki wsparciu prof. dr hab. n. med. Krzysztofa Ficka w murach Szkoły Podstawowej nr 1 w Bieruniu powstaje stała ekspozycja tablic pamiątkowych honorujących naszych Wybitnych Absolwentów. Celem przedsięwzięcia jest trwałe docenienie ich osiągnięć, wyrażenie uznania dla lat ciężkiej pracy oraz zachowanie pamięci o lokalnych mistrzach – tak, aby ich postawa inspirowała kolejne pokolenia uczniów."
     }
   },
